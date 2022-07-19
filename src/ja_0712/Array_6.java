@@ -36,6 +36,7 @@ engTotal += score[i][1];//영어 점수 누적
 mathTotal += score[i][2];//수학 점수 누적
 scienceTotal += score[i][3];//수학 점수 누적
 
+
 //번호를 3개 자리를 차지하며 출력시키는 부분
 System.out.printf("%3d", (i+1)); //번호 출력
 

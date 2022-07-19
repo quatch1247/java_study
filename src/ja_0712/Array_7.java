@@ -23,9 +23,6 @@ public class Array_7 {
 		System.out.println("kbs 배열의 크기 : " + mbc.length );
 		
 		
-		
-//	        String path = System.getProperty("user.dir");
-//	        System.out.println("현재 작업 경로: " + path);
     }
 	
 	}
