@@ -1,0 +1,21 @@
+.Runnable 인터페이스 사용
+: 이미 다른 클래스를 상속받아 Thread 클래스를 상속받아
+사용할 수 없을 때 Runnable 인터페이스를 사용합나더.
+
+.Runnable 사용방법
+
+1. Runnable 인터페이스를 implements 하는 클래스를 정의한다.
+2. Runnable 인터페이스의 run()메소드를 재정희 합니다.
+
+class Runnable implements Runnable //Runnable 인터페이스 구현
+{
+public void run() // run()메스드 재정의
+{
+...
+}
+}
+
+3. main()메소드에서 Runnable 인터페이스를 구현한 클래스 객체를 생성
+4. Thread 클래스 객체를 생성하면서 생성자에 3.에서 생성한 객체를 매개변수로 전달
+
+5. 4.에서 생성한 객체를 사용해 start()메소드 호출
