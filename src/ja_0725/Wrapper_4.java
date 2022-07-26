@@ -14,6 +14,7 @@ public class Wrapper_4 {
 	//int int_4 =  nteger.parseInt("FF", 16);
 	int int_4 = Integer.parseInt("FF", 16);
 	
+	
 	Integer integer_1 = Integer.valueOf("100",2);
 	Integer integer_2 = Integer.valueOf("100",8);
 	Integer integer_3 = Integer.valueOf("100",16);
