@@ -37,7 +37,7 @@ public class ArrayList_4 {
 	        
 	        while(itt.hasNext()) {
 	        	
-	        	System.out.println("\n" + itt.next());
+	        	System.out.print("\n" + itt.next());
 	        	kor = ((Integer)itt.next()).intValue();
 	        	eng = ((Integer)itt.next()).intValue();
 	        	math = ((Integer)itt.next()).intValue();
