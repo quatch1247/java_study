@@ -15,27 +15,26 @@ package ja_0727;
 	        
 	        int[] 국어 = {77, 45, 67, 89, 33, 90, 54, 69, 78, 99};
 	        int[] 영어 = {37, 45, 67, 89, 93, 90, 54, 69, 30, 99};
-	        int[] 수학 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	        int[] 수학 = {34, 55, 67, 45, 23, 79, 67, 54, 43, 23};
 	        
 	        Vector vv = new Vector();
 	        
 	        for(int i = 0; i<10; i++){
 	            
-	            vv.addElement(이름[i]);
+	            vv.add(이름[i]);
 	            vv.add(국어[i]);
 	            vv.add(영어[i]);
-	            vv.addElement(수학[i]);
+	            vv.add(수학[i]);
 	        }
 	        
 	        System.out.println("--------------학생 성적 조회 프로그램 ---------------");
-	        System.out.println("\n이름\t 국어\t 영어\t 수학\t 총점\t 평균 ");
+	        System.out.println("\n이름\t국어\t영어\t수학\t총점\t평균 ");
 	        
 	        Enumeration enu = vv.elements();
 	        
 	        while(enu.hasMoreElements()){
 	 
 	            System.out.print("\n" + enu.nextElement());
-	            
 	            kor = ((Integer) enu.nextElement()).intValue();
 	            eng = ((Integer) enu.nextElement()).intValue();
 	            math= ((Integer) enu.nextElement()).intValue();
