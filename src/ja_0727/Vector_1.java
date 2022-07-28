@@ -20,7 +20,7 @@ public class Vector_1 {
 		vv.trimToSize(); //빈 공간을 업앤다 용량과 크기가 같아진다.
 		
 		System.out.println("=====================66");
-		
+	
 		print(vv);
 		
 		vv.ensureCapacity(7); //Vector의 용량이 최소한 minCapacity가 되도로한다.
