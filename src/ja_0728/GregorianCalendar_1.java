@@ -13,7 +13,6 @@ public class GregorianCalendar_1 {
 
 		// Calendar는 추상 클래스라서 new를 사용할 수 없으므로 getInstance() 메소드 이용
 
-		//
 		Calendar cal = Calendar.getInstance();  
 
              // GregorianCalenda는 Calendar를 상속 구현한 그레고리력 클래스
