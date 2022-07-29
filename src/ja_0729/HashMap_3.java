@@ -1,60 +1,92 @@
 package ja_0729;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
-class HashMap_3 {
+public class HashMap_3 {
+	
 	static HashMap phoneBook = new HashMap();
-
+	
 	public static void main(String[] args) {
-		addPhoneNo("친구", "이자바", "010-111-1111");
-		addPhoneNo("친구", "김자바", "010-222-2222");
-		addPhoneNo("친구", "김자바", "010-333-3333");
-		addPhoneNo("회사", "김대리", "010-444-4444");
-		addPhoneNo("회사", "김대리", "010-555-5555");
-		addPhoneNo("회사", "박대리", "010-666-6666");
-		addPhoneNo("회사", "이과장", "010-777-7777");
-		addPhoneNo("세탁", "010-888-8888");
-
+		
+		
+		
+		addPhoneNO("회사", "수선화", "010-2279-2324");
+		
+		
+		addPhoneNO("회사", "해당화", "010-234-6564");
+		addPhoneNO("친구", "해당화", "010-345-4747");
+		addPhoneNO("친구", "들국화", "010-123-2222");
+		addPhoneNO("친구", "해바라기", "010-3333-4444");
+		addPhoneNO("친구", "들국화", "010-6634-5555");
+		addPhoneNO("회사", "들국화", "010-2723-2323");
+		addPhoneNO("회사", "영산강", "010-1279-2324");
+		addPhoneNO("회사", "섬진강", "010-2279-2324");
+		addPhoneNO("회사", "금강", "010-2279-6666");
+		addPhoneNO("회사", "한강", "010-9999-7777");
+		addPhoneNO("세탁", "010-2279-2324");
+		
 		printList();
-	} // main
-
-	// 그룹을 추가하는 메서드// 그룹에 이름이 있는지 업는지
-	static void addGroup(String groupName) {
-		if(!phoneBook.containsKey(groupName))
-			phoneBook.put(groupName, new HashMap());
+		
 	}
-
-	// 그룹에 전화번호를 추가하는 메서드
-	static void addPhoneNo(String groupName, String name, String tel) {
-		addGroup(groupName);
-		HashMap group = (HashMap)phoneBook.get(groupName);
-		group.put(tel, name);	// 이름은 중복될 수 있으니 전화번호를 key로 저장한다.
-	}
-
-	static void addPhoneNo(String name, String tel) {
-		addPhoneNo("기타", name, tel);
-	}
-
-	// 전화번호부 전체를 출력하는 메서드
-	static void printList() {
+	
+	
+	// 전화 번호부 전체를 출력
+	private static void printList() {
+		
 		Set set = phoneBook.entrySet();
-		Iterator it = set.iterator();	
-
-		while(it.hasNext()) {
-			Map.Entry e = (Map.Entry)it.next();
-
+		Iterator itt = set.iterator();
+		
+		while(itt.hasNext()) {
+			
+			Map.Entry e = (Entry) itt.next();
+			
 			Set subSet = ((HashMap)e.getValue()).entrySet();
-			Iterator subIt = subSet.iterator();	
-
-			System.out.println(" * "+e.getKey()+"["+subSet.size()+"]");
-
+			Iterator subIt = subSet.iterator();
+			
+			System.out.println(" * " + e.getKey() + "[" + subSet.size() + "]");
+			
 			while(subIt.hasNext()) {
-				Map.Entry subE = (Map.Entry)subIt.next();
-				String telNo = (String)subE.getKey();
-				String name = (String)subE.getValue();
-				System.out.println(name + " " + telNo );
+				
+				Map.Entry subE = (Entry) subIt.next();
+				
+				String telNo = (String) subE.getKey();
+				String name = (String) subE.getValue();
+				
+				System.out.println(name + " " + telNo);
 			}
+			
 			System.out.println();
+					
 		}
-	}	// printList()
-} // class
+		
+		
+	}
+
+	// addPhoneNO("세탁", "010-2279-2324");
+	private static void addPhoneNO(String name, String tel) {
+		
+		addPhoneNO("기타", name, tel);
+	}
+	
+	
+	// addPhoneNO("회사", "수선화", "010-2279-2324");
+	private static void addPhoneNO(String groupName, String name, String tel) {
+		
+		addGroup(groupName);
+		
+		HashMap group = (HashMap) phoneBook.get(groupName);
+		group.put(tel, name);
+				
+	}
+	
+	private static void addGroup(String groupName) {
+		if(!phoneBook.containsKey(groupName)) {
+			phoneBook.put(groupName, new HashMap());
+		}
+	}
+
+}

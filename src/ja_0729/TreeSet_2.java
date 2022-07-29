@@ -3,7 +3,6 @@ package ja_0729;
 import java.util.TreeSet;
 
 public class TreeSet_2 {
-
 	public static void main(String[] args) {
 		
 		TreeSet<String> set = new TreeSet<String>();
@@ -18,6 +17,8 @@ public class TreeSet_2 {
 		set.add("Car");
 		set.add("disc");
 		set.add("dance");
+		set.add("dZZZZ");
+		set.add("elevator");
 		set.add("dzzzz");
 		set.add("elephant");
 		set.add("korea");
@@ -26,11 +27,9 @@ public class TreeSet_2 {
 		
 		System.out.println(set);
 		
-		System.out.println("range search from : " + from + " to : " + to );
-		System.out.println("result1 : " + set.subSet(from, to));
-		System.out.println("result2 : " + set.subSet(from, to + "zzzz"));
-		
-		
+		System.out.println("range search : from : " + from + " to : " + to);
+		System.out.println("result11 : " + set.subSet(from, to));
+		System.out.println("result22 : " + set.subSet(from, to + "elephant"));
 	}
 
 }
