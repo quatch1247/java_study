@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Queue_1 {
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 	public static void main(String[] args) {
 	
 	int time = 10;
@@ -23,7 +23,9 @@ public class Queue_1 {
 	
 //	큐안에 넣을 때에는 Queue명.offer(값);
 //	큐에서 값을 빼낼 때에는 Queue명.poll();
-//	
+
+	
+	
 	
 	while(!qq.isEmpty()) {
 		System.out.println(qq.poll() + " aaa ");
